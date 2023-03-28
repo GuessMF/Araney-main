@@ -118,6 +118,13 @@ useAgreementOpen.addEventListener("click", () => {
   popUp[0].style.display = "flex";
   document.body.style.overflow = "hidden";
 });
+//закрытие кликом по фону
+popUp[0].addEventListener("click", (e) => {
+  if (e.target.className == "popup__block use-agreement") {
+    popUp[0].style.display = "none";
+    document.body.style.overflow = "visible";
+  }
+});
 popUpCloseBtn[0].addEventListener("click", () => {
   popUp[0].style.display = "none";
   document.body.style.overflow = "visible";
@@ -129,6 +136,13 @@ const personalInfoOpen = document.querySelector(".discuss__personal-info");
 personalInfoOpen.addEventListener("click", () => {
   popUp[1].style.display = "flex";
   document.body.style.overflow = "hidden";
+});
+//закрытие кликом по фону
+popUp[1].addEventListener("click", (e) => {
+  if (e.target.className == "popup__block personal-info") {
+    popUp[1].style.display = "none";
+    document.body.style.overflow = "visible";
+  }
 });
 popUpCloseBtn[1].addEventListener("click", () => {
   popUp[1].style.display = "none";
