@@ -1,0 +1,47 @@
+@import "normalize.css";
+@import "variables.scss";
+@import "__header.scss";
+@import "__welcome-screen.scss";
+@import "__about-us.scss";
+@import "__how-we-work.scss";
+@import "__services.scss";
+@import "__selected-cases.scss";
+@import "__discuss.scss";
+@import "__footer.scss";
+@import "__popup__use-agreement";
+@import "__popup__personal-info";
+
+body,
+html {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+
+  // ::-webkit-scrollbar {
+  //   width: 0;
+  //   // height: 20px;
+  // }
+  // ::-webkit-scrollbar:horizontal {
+  //   width: 20px;
+  // }
+  // ::-webkit-scrollbar-thumb:horizontal {
+  //   // background: #000;
+  //   width: 0;
+  // }
+}
+
+#app {
+  max-width: 1440px;
+
+  height: fit-content;
+  background-color: $white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  main {
+    margin-top: 80px;
+  }
+}

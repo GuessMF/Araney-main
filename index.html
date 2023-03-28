@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style/style.css" />
+
+    <title>Araney</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <nav>
+          <div class="navbar">
+            <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="toggle" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>
+              <div class="logo">
+                <a href="#app">
+                  <img
+                    class="header__logo"
+                    src="./src/images/header-logo.png"
+                    alt="header-logo"
+                /></a>
+              </div>
+              <div class="menu-items">
+                <li><a href="#about-us">О нас</a></li>
+                <li>
+                  <a href="#how-we-work">Как мы работаем</a>
+                </li>
+                <li>
+                  <a href="#services">Услуги</a>
+                </li>
+                <li>
+                  <a href="#selected-cases">Избранные кейсы</a>
+                </li>
+                <a href="/">
+                  <img
+                    class="header__logo"
+                    src="./src/images/header-logo.png"
+                    alt="header-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="header__wrapper">
+          <a href="#app">
+            <img
+              class="header__logo"
+              src="./src/images/header-logo.png"
+              alt="header-logo"
+          /></a>
+
+          <div class="header__about-us"><a href="#about-us">О нас</a></div>
+          <div class="header__working">
+            <a href="#how-we-work">Как мы работаем</a>
+          </div>
+          <div class="header__services">
+            <a href="#services">Услуги</a>
+          </div>
+          <div class="header__favourites">
+            <a href="#selected-cases">Избранные кейсы</a>
+          </div>
+          <div class="header__button">
+            <button onClick='location.href="#discuss"'>Написать нам</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="welcome-screen" id="welcome-screen">
+          <div class="welcome-screen__left-box">
+            <div class="welcome-screen__info">
+              <div class="welcome-screen__title">
+                <h1>Выводим бизнес на новый уровень</h1>
+              </div>
+              <div class="welcome-screen__subtitle">
+                <h3>Решения, которые действительно работают</h3>
+              </div>
+              <div class="welcome-screen__buttons">
+                <button
+                  class="welcome-screen__write-us"
+                  onClick='location.href="#discuss"'
+                >
+                  Написать нам
+                </button>
+
+                <button
+                  class="welcome-screen__working"
+                  onClick='location.href="#how-we-work"'
+                >
+                  Как мы работаем
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="welcome-screen__picture"></div>
+        </div>
+        <div id="about-us" class="about-us">
+          <content class="about-us__content">
+            <div class="about-us__header">
+              <div class="about-us__text">
+                <h2>О нас</h2>
+                <span>
+                  <p>
+                    Компания Аранея работает на рынке информационных технологий
+                    с 2007 года, и сегодня мы — одна из лидирующих компаний на
+                    рынке IT-решений и полного спектра услуг по построению,
+                    оптимизации, поддержке, развитию IT-инфраструктуры.
+                  </p>
+                  <p>
+                    Мы — это высококвалифицированная команда специалистов с
+                    богатым практическим опытом построения надёжных и
+                    эффективных IT-решений.
+                  </p>
+                </span>
+              </div>
+              <div class="about-us__logo-box">
+                <img src="./src/images/aranay-subtitle.png" alt="araney-logo" />
+              </div>
+            </div>
+
+            <div class="about-us__middle">
+              <div class="about-us__first-box">
+                <div class="about-us__stat">
+                  <h2>15 лет</h2>
+                  <p>На рынке труда с 2007 года</p>
+                </div>
+                <div class="about-us__icon">
+                  <img src="./src/images/icon-emoji1.png" alt="smile" />
+                </div>
+              </div>
+              <div class="about-us__second-box">
+                <div class="about-us__stat">
+                  <h2>Более 150</h2>
+                  <p>Успешных проектов</p>
+                </div>
+                <div class="about-us__icon">
+                  <img src="./src/images/icon-emoji2.png" alt="heart" />
+                </div>
+              </div>
+              <div class="about-us__third-box">
+                <div class="about-us__stat">
+                  <h2>35</h2>
+                  <p>Специалистов в компании</p>
+                </div>
+                <div class="about-us__icon">
+                  <img src="./src/images/icon-emoji3.png" alt="hands" />
+                </div>
+              </div>
+            </div>
+            <div class="about-us__subtitle">
+              <p>Наши партнеры</p>
+            </div>
+            <div class="about-us__hr">
+              <hr />
+            </div>
+            <div class="about-us__partners">
+              <div class="about-us__kaspersky">
+                <img src="./src/images/kaspersky.png" alt="kaspersky-logo" />
+              </div>
+              <div class="about-us__dr-web">
+                <img src="./src/images/dr-web.png" alt="dr-web-logo" />
+              </div>
+              <div class="about-us__1c">
+                <img src="./src/images/1c-logo.png" alt="1c-logo" />
+              </div>
+              <div class="about-us__joomba">
+                <img src="./src/images/joomba-logo.png" alt="joomba-logo" />
+              </div>
+              <div class="about-us__bitrix">
+                <img src="./src/images/bitrix-logo.png" alt="bitrix-logo" />
+              </div>
+            </div>
+          </content>
+        </div>
+
+        <div id="how-we-work" class="how-we-work">
+          <div class="sticky-container">
+            <main>
+              <section>
+                <div class="how-we-work__block description">
+                  <div class="how-we-work__title">
+                    <h1>Как мы работаем</h1>
+                    <p>
+                      Мы придерживаемся индивидуальному подходу в решении задач.
+                      Однако в общих чертах любой проект разрабатывается в 4
+                      шага
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="how-we-work__block steps">
+                  <div class="how-we-work__text">
+                    <span>Шаг 1</span>
+                    <h1>Изучение проекта</h1>
+                    <p>
+                      Мы тщательно изучаем поставленную задачу, уточним у вас
+                      все детали и ограничения проекта, после чего предложим
+                      варианты решения
+                    </p>
+                  </div>
+                  <div class="how-we-work__picture">
+                    <img src="./src/images/step1.png" alt="step1 " />
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="how-we-work__block steps">
+                  <div class="how-we-work__text">
+                    <span>Шаг 2</span>
+                    <h1>Проектирование</h1>
+                    <p>
+                      На основании данных мы проектируем user-flow, архитектуру
+                      проекта, а также планируем задачи и строим roadmap
+                    </p>
+                  </div>
+                  <div class="how-we-work__picture">
+                    <img src="./src/images/step2.png" alt="step2" />
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="how-we-work__block steps">
+                  <div class="how-we-work__text">
+                    <span>Шаг 3</span>
+                    <h1>Реализация проект</h1>
+                    <p>
+                      Этот шаг можно декомпозироват на множество шагов:
+                      построение архитектуры сервиса, аналитика
+                      бизнес-процессов, брендинг, дизайн посадочных страниц,
+                      развёртывание ПО, программирование, SEO и таргетинг
+                    </p>
+                  </div>
+                  <div class="how-we-work__picture">
+                    <img src="./src/images/step3.png" alt="step3" />
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="how-we-work__block steps">
+                  <div class="how-we-work__text">
+                    <span>Шаг 4</span>
+                    <h1>Публикация и поддержка</h1>
+                    <p>
+                      После реализации продукта, мы тщательно тестируем
+                      разработанное решение, после чего поддерживаем
+                      его работоспособность даже после завершения проекта
+                    </p>
+                  </div>
+                  <div class="how-we-work__picture">
+                    <img src="./src/images/step4.png" alt="step4" />
+                  </div>
+                </div>
+              </section>
+            </main>
+          </div>
+        </div>
+
+        <div id="services" class="services">
+          <div class="services__title">
+            <h2>Услуги</h2>
+          </div>
+          <div class="services__content">
+            <div class="first_content_block services__content_block">
+              <div class="services__description">
+                <div class="services__wrapper">
+                  <h2>Разработка веб-приложений</h2>
+                  <p>
+                    Мобильные приложения, PWA, информационные системы,
+                    веб-сервисы, порталы и интернет-маркетплейсы
+                  </p>
+                </div>
+                <div class="services__button">
+                  <button onClick='location.href="#discuss"'>
+                    Написать нам
+                  </button>
+                  <img
+                    class="new-button-img"
+                    src="./src/images/services-img-1.png"
+                    alt="services-1"
+                  />
+                </div>
+              </div>
+
+              <div class="services__img">
+                <img src="./src/images/services-img-1.png" alt="services-1" />
+              </div>
+            </div>
+            <div class="services__content_block">
+              <div class="services__description">
+                <div class="services__wrapper">
+                  <h2>Разработка калькуляторов</h2>
+                  <p>
+                    Программы, просчитывающие итоговую конфигурацию по вводным
+                    параметрам
+                  </p>
+                </div>
+                <div class="services__button">
+                  <button onClick='location.href="#discuss"'>
+                    Написать нам
+                  </button>
+                  <img
+                    class="new-button-img"
+                    src="./src/images/services-img-2.png"
+                    alt="services-2"
+                  />
+                </div>
+              </div>
+
+              <div class="services__img">
+                <img src="./src/images/services-img-2.png" alt="services-2" />
+              </div>
+            </div>
+            <div class="services__content_block">
+              <div class="services__description">
+                <div class="services__wrapper">
+                  <h2>Интеграция ERP, CRM</h2>
+                  <p>
+                    Мой склад, 1C: управление предприятием, Bitrix 24, либо же
+                    специализированное, кастомное решение
+                  </p>
+                </div>
+                <div class="services__button">
+                  <button onClick='location.href="#discuss"'>
+                    Написать нам
+                  </button>
+                  <img
+                    class="new-button-img"
+                    src="./src/images/services-img-3.png"
+                    alt="services-3"
+                  />
+                </div>
+              </div>
+
+              <div class="services__img">
+                <img src="./src/images/services-img-3.png" alt="services-3" />
+              </div>
+            </div>
+            <div class="services__content_block">
+              <div class="services__description">
+                <div class="services__wrapper">
+                  <h2>Системы управления</h2>
+                  <p>
+                    Промышленные системы управления: от заводских линий и
+                    светодиодных табло, до комплексы по контролю транспорта
+                  </p>
+                </div>
+                <div class="services__button">
+                  <button onClick='location.href="#discuss"'>
+                    Написать нам
+                  </button>
+                  <img
+                    class="new-button-img"
+                    src="./src/images/services-img-4.png"
+                    alt="services-4"
+                  />
+                </div>
+              </div>
+
+              <div class="services__img">
+                <img src="./src/images/services-img-4.png" alt="services-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="selected-cases" class="selected-cases">
+          <div class="selected-cases__title">
+            <h2>Избранные кейсы</h2>
+          </div>
+          <div class="selected-cases__content">
+            <div class="selected-cases__top_content">
+              <div class="selected-cases__top_content__left">
+                <div class="selected-cases__am-block">
+                  <div class="selected-cases__wrapper">
+                    <div class="selected-cases__text">
+                      <h2>Ароматный мир</h2>
+                      <p>
+                        Полный цикл работ по разработке личного кабинета,
+                        включая интеграцию с учётной системой, заказом через
+                        сайт и блогом
+                      </p>
+                    </div>
+                    <div class="selected-cases__logo">
+                      <img src="./src/images/am-logo.png" alt="am-logo" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__top_content__right">
+                <div class="selected-cases__rzd_block">
+                  <div class="selected-cases__rzd-img"></div>
+                  <div class="selected-cases__wrapper">
+                    <div class="selected-cases__text">
+                      <h2>РЖД</h2>
+                      <p>
+                        Аппаратно программный комплекс по состоянию бесстыкового
+                        пути
+                      </p>
+                    </div>
+                    <div class="selected-cases__logo">
+                      <img src="./src/images/rzd-logo.png" alt="rzd-logo" />
+                    </div>
+                  </div>
+                </div>
+                <div class="selected-cases__declarant_block">
+                  <div class="selected-cases__wrapper">
+                    <div class="selected-cases__text">
+                      <h2>Декларант</h2>
+                      <p>Разработка портала для работы с таможней</p>
+                    </div>
+                    <div class="selected-cases__logo">
+                      <img
+                        src="./src/images/declarant-logo.png"
+                        alt="declarant-logo"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="selected-cases__bottom_content">
+              <div class="selected-cases__ice-palace">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Ледовый дворец</h2>
+                    <p>
+                      Светодиодное табло на Ледовом дворце с интеграцией в
+                      билетную систему с целью отображения актуальных цен и
+                      количества оставшихся в продаже билетов
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__cryptonator">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Cryptonator</h2>
+                    <p>Бекенд портала, два расширения для браузера</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__bicycle-city">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Велогород</h2>
+                    <p>Система шеринга велосипедов</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__peterhof">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Петергоф</h2>
+                    <p>Система поддержки светодиодных и информационных табло</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__glonass">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Глонасс</h2>
+                    <p>Портал для системы Глонасс</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__add">
+                <div class="selected-cases__add-wrapper">
+                  <div class="selected-cases__plus-icon">
+                    <img src="./src/images/add-icon.png" alt="add-icon" />
+                  </div>
+                  <div class="selected-cases__add-text">
+                    <h3 class="selected-cases__add-text-h3">
+                      Нажмите, чтобы загрузить еще 3 работы
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__alfa-mk">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Сайт для Альфа-МК</h2>
+                    <p>
+                      Дистрибьютор B-braw – крупнейшего бренда медицинского
+                      оборудования
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="discuss">
+          <div class="popup__block use-agreement">
+            <div class="popup__close-btn">
+              <img
+                src="./src/images/popup-close-btn.png"
+                alt="popup-close-btn"
+              />
+            </div>
+            <div class="popup__wrapper">
+              <div class="popup__title">Соглашение об использовании сайта</div>
+              <div class="popup__content">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup__block personal-info">
+            <div class="popup__close-btn">
+              <img
+                src="./src/images/popup-close-btn.png"
+                alt="popup-close-btn"
+              />
+            </div>
+            <div class="popup__wrapper">
+              <div class="popup__title">
+                Правила обработки персональных данных
+              </div>
+              <div class="popup__content">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  sodales neque tellus, et fringilla mauris bibendum eget. Proin
+                  ullamcorper porttitor cursus. Nam condimentum tortor ut felis
+                  condimentum, eget molestie lacus faucibus. Phasellus eget urna
+                  vestibulum ante imperdiet dignissim. Curabitur rhoncus risus
+                  ut rutrum convallis. Integer sed odio turpis. Proin ultricies
+                  mauris quis ligula scelerisque volutpat.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="discuss__wrapper">
+            <div class="discuss__left-box">
+              <div class="discuss__text">
+                <h2>Хотите обсудить ваш проект?</h2>
+                <h3>
+                  Оставьте ваши данные и мы свяжемся с вами ближайшее время
+                </h3>
+              </div>
+              <div class="discuss__img">
+                <img src="./src/images/discuss-img.png" alt="discuss" />
+              </div>
+            </div>
+            <div class="discuss__right-box">
+              <span id="discuss" class="anchor"></span>
+              <div class="discuss__content">
+                <div class="discuss__form_title">
+                  <h3>Оставить заявку</h3>
+                </div>
+                <div class="discuss__form_top">
+                  <div class="discuss__form_left">
+                    <p>Имя</p>
+                    <div class="discuss__form_input">
+                      <input type="text" placeholder="Как к вам обращаться" />
+                    </div>
+                  </div>
+                  <div class="discuss__form_right">
+                    <p>Телефон</p>
+                    <div class="discuss__form_input">
+                      <input type="text" placeholder="Номер для связи" />
+                    </div>
+                  </div>
+                </div>
+                <div class="discuss__form_middle">
+                  <p>Почта</p>
+                  <div class="discuss__form_input">
+                    <input type="text" placeholder="Почта для связи" />
+                  </div>
+                </div>
+                <div class="discuss__form_bottom">
+                  <p>Сообщение</p>
+                  <div class="discuss__form_input">
+                    <textarea
+                      cols="30"
+                      rows="10"
+                      placeholder="Опишите вашу задачу"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="discuss__form_add">
+                  <p>Прикрепить файл</p>
+                  <img src="./src/images/add-icon.png" alt="add-icon" />
+                </div>
+                <div class="discuss__form_button">
+                  <button>Оставить заявку</button>
+                </div>
+              </div>
+              <div class="discuss__policy">
+                <p>
+                  Заполняя данную форму, вы принимаете условия
+                  <a class="discuss__use-agreement"
+                    >Соглашения об использовании сайта</a
+                  >, и соглашаетесь с
+                  <a class="discuss__personal-info"
+                    >Правилами обработки и использования персональных данных</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__email">
+            <h2>info@araneya.com</h2>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__logo">
+              <img
+                src="./src/images/araney-footer-logo.png"
+                alt="araney-footer"
+              />
+            </div>
+            <div class="footer__info">
+              <p>ООО “АВ-груп”, ИНН 7811379777</p>
+            </div>
+            <div class="footer__year">
+              <p class="footer__current-year"></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="src/js/index.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
