@@ -100,8 +100,8 @@ function touchStart(event) {
 window.addEventListener("scroll", function () {
   if (window.pageYOffset) {
     //&& window.pageYOffset <= 3525
-    console.log("visible");
-    console.log(window.pageYOffset);
+    //console.log("visible");
+    // console.log(window.pageYOffset);
     // document.body.style.overflow = "hidden";
     // setTimeout(() => {
     //   document.body.style.overflow = "visible";
@@ -109,7 +109,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// открытие соглашения об испольновании сайта
+// Открытие соглашения об испольновании сайта
+
 const popUpCloseBtn = document.querySelectorAll(".popup__close-btn");
 const popUp = document.querySelectorAll(".popup__block");
 
@@ -118,13 +119,17 @@ useAgreementOpen.addEventListener("click", () => {
   popUp[0].style.display = "flex";
   document.body.style.overflow = "hidden";
 });
-//закрытие кликом по фону
+
+//Закрытие кликом по фону
+
 popUp[0].addEventListener("click", (e) => {
   if (e.target.className == "popup__block use-agreement") {
     popUp[0].style.display = "none";
     document.body.style.overflow = "visible";
   }
 });
+//Закрытие кнопкой
+
 popUpCloseBtn[0].addEventListener("click", () => {
   popUp[0].style.display = "none";
   document.body.style.overflow = "visible";
@@ -137,18 +142,85 @@ personalInfoOpen.addEventListener("click", () => {
   popUp[1].style.display = "flex";
   document.body.style.overflow = "hidden";
 });
-//закрытие кликом по фону
+
+//Закрытие кликом по фону
+
 popUp[1].addEventListener("click", (e) => {
   if (e.target.className == "popup__block personal-info") {
     popUp[1].style.display = "none";
     document.body.style.overflow = "visible";
   }
 });
+
+//Закрытие кнопкой
+
 popUpCloseBtn[1].addEventListener("click", () => {
   popUp[1].style.display = "none";
   document.body.style.overflow = "visible";
 });
 
+// Позиция стартовая welcome-screen
+
+// console.log(welcomeScreen.getBoundingClientRect() + " Welcome screen pos");
+
+// const options = {
+//   rootMargin: "0px",
+//   threshold: [0, 0.5],
+// };
+
+// const observer = new IntersectionObserver(trueCallback, options);
+
+// const welcomeScreen = document.querySelector("#welcome-screen");
+// observer.observe(welcomeScreen);
+
+// // callback-функция (возвратная функция)
+// const trueCallback = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     // делаем что-либо для каждого переданного элемента (в нашем случае он один)
+//     console.log("сработало");
+//   });
+// };
+
+const changeNav = (entries, observer) => {
+  entries.forEach((entry) => {
+    // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
+    // document.querySelector(".test").classList.remove("test");
+    if (entry.isIntersecting) {
+      // удаляем активный класс у элемента меню
+
+      // получаем ID секции, которая текущая
+      let id = entry.target.getAttribute("id");
+      console.log(id);
+      let header = document.querySelector(`.header__${id}`);
+      header.classList.add("test");
+      // let jjj = document.querySelector(".welcome-screen");
+      // jjj.classList.add("test");
+      // обращаемся к ссылке меню, у которой href равен ID секции
+      // let newLink = document.querySelector(`[href="#${id}"]`);
+      // newLink.classList.add("active");
+    } else if (!entry.isIntersecting) {
+      let id = entry.target.getAttribute("id");
+      console.log(id);
+      let header = document.querySelector(`.header__${id}`);
+      header.classList.remove("test");
+    }
+  });
+};
+
+// обратите внимание на значение опции threshold
+const options = {
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(changeNav, options);
+
+// передаём все секции в обсервер
+
+const sections = document.querySelectorAll("div[id]");
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
 //
 //
 //
