@@ -192,7 +192,7 @@ const changeNav = (entries, observer) => {
       let id = entry.target.getAttribute("id");
       console.log(id);
       let header = document.querySelector(`.header__${id}`);
-      header.classList.add("test");
+      header.classList.setAttribute("target");
       // let jjj = document.querySelector(".welcome-screen");
       // jjj.classList.add("test");
       // обращаемся к ссылке меню, у которой href равен ID секции
