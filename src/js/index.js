@@ -188,14 +188,16 @@ const changeNav = (entries, observer) => {
       let id = entry.target.getAttribute("id");
       let header = document.querySelector(`.header__${id}`);
 
-      if (header && id !== "app") {
+      let navBarLink = document.querySelector(`[href="#${id}"]`);
+
+      const screenWidth = window.screen.width;
+
+      if (header && id !== "app" && screenWidth > 1040) {
         header.childNodes[1].classList.add("active");
       }
 
-      let navBarLink = document.querySelector(`[href="#${id}"]`);
-      if (navBarLink) {
-        // console.log(newLink.parentNode);
-        navBarLink.parentNode.classList.add("active"); // находит Li
+      if (screenWidth <= 1040) {
+        navBarLink.parentNode.classList.add("active");
       }
     }
   });
