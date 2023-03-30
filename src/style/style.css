@@ -257,6 +257,15 @@
   }
 }
 
+.active {
+  border-bottom: solid 3px #fca311;
+  margin-bottom: -3px;
+}
+
+#app {
+  border: none !important;
+}
+
 .welcome-screen {
   display: flex;
   flex-direction: row;

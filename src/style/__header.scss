@@ -278,3 +278,10 @@
     }
   }
 }
+.active {
+  border-bottom: solid 3px $orange;
+  margin-bottom: -3px;
+}
+#app {
+  border: none !important;
+}

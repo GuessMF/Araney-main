@@ -183,33 +183,27 @@ popUpCloseBtn[1].addEventListener("click", () => {
 
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
-    // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
-    // document.querySelector(".test").classList.remove("test");
     if (entry.isIntersecting) {
-      // удаляем активный класс у элемента меню
+      document.querySelector(".active").classList.remove("active");
+      let id = entry.target.getAttribute("id");
+      let header = document.querySelector(`.header__${id}`);
 
-      // получаем ID секции, которая текущая
-      let id = entry.target.getAttribute("id");
-      console.log(id);
-      let header = document.querySelector(`.header__${id}`);
-      header.classList.setAttribute("target");
-      // let jjj = document.querySelector(".welcome-screen");
-      // jjj.classList.add("test");
-      // обращаемся к ссылке меню, у которой href равен ID секции
-      // let newLink = document.querySelector(`[href="#${id}"]`);
-      // newLink.classList.add("active");
-    } else if (!entry.isIntersecting) {
-      let id = entry.target.getAttribute("id");
-      console.log(id);
-      let header = document.querySelector(`.header__${id}`);
-      header.classList.remove("test");
+      if (header && id !== "app") {
+        header.childNodes[1].classList.add("active");
+      }
+
+      let navBarLink = document.querySelector(`[href="#${id}"]`);
+      if (navBarLink) {
+        // console.log(newLink.parentNode);
+        navBarLink.parentNode.classList.add("active"); // находит Li
+      }
     }
   });
 };
 
 // обратите внимание на значение опции threshold
 const options = {
-  threshold: 0.5,
+  threshold: 0.1,
 };
 
 const observer = new IntersectionObserver(changeNav, options);
@@ -217,10 +211,19 @@ const observer = new IntersectionObserver(changeNav, options);
 // передаём все секции в обсервер
 
 const sections = document.querySelectorAll("div[id]");
-
+console.log(sections);
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// let options = {
+//   root: document.querySelector("#scrollArea"),
+//   rootMargin: "0px",
+//   threshold: 1.0,
+// };
+
+// let observer = new IntersectionObserver(callback, options);
+
 //
 //
 //
