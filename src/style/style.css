@@ -1928,7 +1928,7 @@ content .about-us__partners img {
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom textarea {
-    width: 96%;
+    width: 90%;
   }
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_add {
