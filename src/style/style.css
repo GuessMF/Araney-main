@@ -1643,6 +1643,7 @@ content .about-us__partners img {
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper {
   height: 124px;
   text-align: center;
+  margin-top: 15%;
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper h3 {
   font-size: 20px;
