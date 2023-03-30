@@ -108,6 +108,24 @@ window.addEventListener("scroll", function () {
     // }, 1000);
   }
 });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Открытие соглашения об испольновании сайта
 
@@ -159,41 +177,21 @@ popUpCloseBtn[1].addEventListener("click", () => {
   document.body.style.overflow = "visible";
 });
 
-// Позиция стартовая welcome-screen
-
-// console.log(welcomeScreen.getBoundingClientRect() + " Welcome screen pos");
-
-// const options = {
-//   rootMargin: "0px",
-//   threshold: [0, 0.5],
-// };
-
-// const observer = new IntersectionObserver(trueCallback, options);
-
-// const welcomeScreen = document.querySelector("#welcome-screen");
-// observer.observe(welcomeScreen);
-
-// // callback-функция (возвратная функция)
-// const trueCallback = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     // делаем что-либо для каждого переданного элемента (в нашем случае он один)
-//     console.log("сработало");
-//   });
-// };
+//Подсвечивание в шапке
 
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.querySelector(".active").classList.remove("active");
       let id = entry.target.getAttribute("id");
-      let header = document.querySelector(`.header__${id}`);
+      let headerLink = document.querySelector(`.header__${id}`);
 
       let navBarLink = document.querySelector(`[href="#${id}"]`);
 
       const screenWidth = window.screen.width;
 
-      if (header && id !== "app" && screenWidth > 1040) {
-        header.childNodes[1].classList.add("active");
+      if (headerLink && id !== "app" && screenWidth > 1040) {
+        headerLink.childNodes[1].classList.add("active");
       }
 
       if (screenWidth <= 1040) {
@@ -203,47 +201,15 @@ const changeNav = (entries, observer) => {
   });
 };
 
-// обратите внимание на значение опции threshold
 const options = {
   threshold: 0.1,
 };
-
 const observer = new IntersectionObserver(changeNav, options);
-
-// передаём все секции в обсервер
-
 const sections = document.querySelectorAll("div[id]");
-console.log(sections);
+
 sections.forEach((section) => {
   observer.observe(section);
 });
-
-// let options = {
-//   root: document.querySelector("#scrollArea"),
-//   rootMargin: "0px",
-//   threshold: 1.0,
-// };
-
-// let observer = new IntersectionObserver(callback, options);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 //Закрытие гамбургер меню
 const items = document.querySelector(".menu-items");
@@ -256,20 +222,21 @@ items.addEventListener("click", (e) => {
 });
 
 //Появляющиеся элементы в Избранных кейсах
+
+const selectedCasesChilds = document.querySelector(
+  ".selected-cases__bottom_content"
+);
 const addButton = document.querySelector(".selected-cases__add");
-const bicycleCity = document.querySelector(".selected-cases__bicycle-city");
-const peterhof = document.querySelector(".selected-cases__peterhof");
-const glonass = document.querySelector(".selected-cases__glonass");
-const alfaMk = document.querySelector(".selected-cases__alfa-mk");
 
 addButton.addEventListener("click", () => {
-  if (glonass.style.display == "inherit") {
-    alfaMk.style.display = "inherit";
+  if (selectedCasesChilds.childNodes[9].style.display == "inherit") {
+    selectedCasesChilds.childNodes[13].style.display = "inherit"; //alfa
     addButton.style.display = "none";
   }
-  bicycleCity.style.display = "inherit";
-  peterhof.style.display = "inherit";
-  glonass.style.display = "inherit";
+  selectedCasesChilds.childNodes[5].style.display = "inherit"; //bicycle
+  selectedCasesChilds.childNodes[7].style.display = "inherit"; //peterghof
+  selectedCasesChilds.childNodes[9].style.display = "inherit"; // glonass
+
   document.querySelector(".selected-cases__add-text-h3").textContent =
     "Нажмите, чтобы загрузить еще 1 работу";
   addButton.style.margin = "20px 0 0 0";
