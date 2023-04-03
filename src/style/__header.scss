@@ -233,10 +233,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-
-      &:hover {
-        a {
+        &:hover {
           border-bottom: solid 3px $orange;
           margin-bottom: -3px;
         }

@@ -216,7 +216,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.header .header__wrapper div:hover a {
+.header .header__wrapper div a:hover {
   border-bottom: solid 3px #fca311;
   margin-bottom: -3px;
 }
@@ -815,6 +815,11 @@ content .about-us__partners img {
   text-align: left;
   color: #ffffff;
 }
+@media (min-width: 450px) {
+  .how-we-work section .lottie-player {
+    display: none;
+  }
+}
 .how-we-work section .steps .how-we-work__text {
   margin: 24px;
 }
@@ -851,6 +856,99 @@ content .about-us__partners img {
   height: fit-content;
 }
 .how-we-work section .steps img {
+  width: auto;
+  margin: 0 auto;
+}
+
+.how-we-work-mobile {
+  overflow-x: auto;
+  overflow-y: inherit;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  margin: 50px auto;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
+}
+.how-we-work-mobile .sections {
+  height: 85vh !important;
+}
+.how-we-work-mobile .sections main {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.how-we-work-mobile .sections main .section_item {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100vw;
+  height: 85vh;
+  font-size: 20px;
+  scroll-snap-align: start;
+  background-color: #14213d;
+}
+.how-we-work-mobile .sections main .section_item img {
+  width: 100px;
+}
+.how-we-work-mobile .sections main .section_item .how-we-work__block {
+  width: 95vw;
+  margin: 0 20px 0 20px;
+}
+.how-we-work-mobile .sections main .section_item .how-we-work__block .how-we-work__title h1 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 50px;
+  color: #14213d;
+  text-shadow: 0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2, 0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
+}
+.how-we-work-mobile .sections main .section_item .how-we-work__block .how-we-work__title p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.how-we-work-mobile .sections main .section_item .steps {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.how-we-work-mobile .sections main .section_item .steps .how-we-work__text span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fca311;
+}
+.how-we-work-mobile .sections main .section_item .steps .how-we-work__text h1 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.how-we-work-mobile .sections main .section_item .steps .how-we-work__text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.how-we-work-mobile .sections main .section_item .steps .how-we-work__picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.how-we-work-mobile .sections main .section_item .steps img {
   width: 60%;
   width: 50%;
   margin: 0 auto;

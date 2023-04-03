@@ -75,57 +75,25 @@ function touchStart(event) {
   }
 })();
 
-//
-//
-// Нужно поймать кинетический скролл на мобильном устройстве, иначе он проскакиваем мимо нужного контейнера
-//
-//
+//How we work mobile scroll slider
+function mobileScroll() {
+  const howWeWork = document.querySelector("#how-we-work");
+  const sections = document.querySelectorAll("section");
 
-// let item = document.querySelector(".sticky-container");
-// const rect = item.getBoundingClientRect();
-// console.log(rect.top);
-// document.addEventListener("scroll", () => {
-//   console.log(window.pageYOffset);
-//   // document.body.style.overflow = "hidden";
-// });
+  if (window.screen.width < 1025) {
+    //450
+    console.log("mobile");
+    howWeWork.classList.remove("how-we-work");
+    howWeWork.classList.add("how-we-work-mobile");
+    howWeWork.childNodes[1].classList.remove("sticky-container");
+    howWeWork.childNodes[1].classList.add("sections");
 
-// document.getElementById("how-we-work").addEventListener(
-//   "touchmove",
-//   function (event) {
-//     event.preventDefault();
-//   },
-//   false
-// );
-
-window.addEventListener("scroll", function () {
-  if (window.pageYOffset) {
-    //&& window.pageYOffset <= 3525
-    //console.log("visible");
-    // console.log(window.pageYOffset);
-    // document.body.style.overflow = "hidden";
-    // setTimeout(() => {
-    //   document.body.style.overflow = "visible";
-    // }, 1000);
+    sections.forEach((element) => {
+      element.classList.add("section_item");
+    });
   }
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+}
+mobileScroll();
 
 // Открытие соглашения об испольновании сайта
 
@@ -185,9 +153,7 @@ const changeNav = (entries, observer) => {
       document.querySelector(".active").classList.remove("active");
       let id = entry.target.getAttribute("id");
       let headerLink = document.querySelector(`.header__${id}`);
-
       let navBarLink = document.querySelector(`[href="#${id}"]`);
-
       const screenWidth = window.screen.width;
 
       if (headerLink && id !== "app" && screenWidth > 1040) {

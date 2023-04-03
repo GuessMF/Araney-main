@@ -78,6 +78,12 @@
         }
       }
     }
+    @media (min-width: 450px) {
+      .lottie-player {
+        display: none;
+      }
+    }
+
     .steps {
       .how-we-work__text {
         margin: 24px;
@@ -114,9 +120,111 @@
         height: fit-content;
       }
       img {
-        width: 60%;
-        width: 50%;
+        //width: 50%;
+        width: auto;
         margin: 0 auto;
+      }
+    }
+  }
+}
+.how-we-work-mobile {
+  overflow-x: auto;
+  overflow-y: inherit;
+  // height: 85vh;
+  height: fit-content;
+  width: 100vw;
+  margin: 50px auto;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
+  .sections {
+    height: 85vh !important;
+    main {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+
+      .section_item {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100vw;
+        height: 85vh;
+        font-size: 20px;
+        scroll-snap-align: start;
+        background-color: $secondary;
+        img {
+          width: 100px;
+        }
+        .how-we-work__block {
+          width: 95vw;
+          margin: 0 20px 0 20px;
+          .how-we-work__title {
+            h1 {
+              color: $white;
+              font-weight: 700;
+              font-size: 50px;
+              color: #14213d;
+              text-shadow: -0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2,
+                -0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px -0 1px #f2f2f2,
+                1px -0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2,
+                -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2,
+                -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2,
+                1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
+            }
+            p {
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 30px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $white;
+            }
+          }
+        }
+        .steps {
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .how-we-work__text {
+            span {
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 30px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $orange;
+            }
+            h1 {
+              font-size: 34px;
+              font-weight: 700;
+              line-height: 48px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $white;
+            }
+            p {
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 30px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $white;
+            }
+          }
+          .how-we-work__picture {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+          }
+          img {
+            width: 60%;
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
       }
     }
   }
