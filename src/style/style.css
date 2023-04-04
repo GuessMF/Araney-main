@@ -768,6 +768,11 @@ content .about-us__partners {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 450px) {
+  content .about-us__partners {
+    margin: 0 auto;
+  }
+}
 content .about-us__partners div {
   width: -moz-fit-content;
   width: fit-content;
@@ -788,6 +793,11 @@ content .about-us__partners img {
 @media (max-width: 800px) {
   content .about-us__partners img {
     width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  content .about-us__partners img {
+    width: 30%;
   }
 }
 

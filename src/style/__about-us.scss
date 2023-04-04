@@ -240,6 +240,9 @@ content {
       height: fit-content;
       margin-bottom: 20px;
     }
+    @media (max-width: 450px) {
+      margin: 0 auto;
+    }
     div {
       width: fit-content;
       display: flex;
@@ -256,6 +259,9 @@ content {
 
       @media (max-width: 800px) {
         width: 50%;
+      }
+      @media (max-width: 450px) {
+        width: 30%;
       }
     }
   }
