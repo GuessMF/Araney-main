@@ -230,6 +230,7 @@
 
       &:hover {
         background-color: $white-hover;
+        cursor: pointer !important;
       }
 
       a {
@@ -252,6 +253,9 @@
     .header__about-us {
       margin-left: 30px;
     }
+    border-bottom: none !important;
+  }
+  .header__wrapper .active {
   }
   .header__logo {
     margin-left: 0;
@@ -278,7 +282,7 @@
       color: $white;
       font-family: "Nunito Sans";
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 14px;
       line-height: 22px;
       border: none;

@@ -2,7 +2,7 @@
   width: 1440px;
   height: fit-content;
   margin: 100px auto 0;
-  // position: relative;
+  font-family: "Nunito Sans", sans-serif;
 
   @media (max-width: 1439px) {
     width: 100vw;
@@ -27,7 +27,7 @@
     .discuss__left-box {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       width: 50%;
       img {
         width: 458px;
@@ -50,13 +50,22 @@
           font-weight: 600;
           line-height: 38px;
           margin-top: 0;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 38px;
+          color: $secondary;
+
           @media (max-width: 450px) {
             font-size: 26px;
           }
         }
         h3 {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 300;
           font-size: 20px;
-          font-weight: 400;
           line-height: 30px;
           @media (max-width: 450px) {
             font-size: 16px;
@@ -66,7 +75,7 @@
       .discuss__img {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
         img {
           @media (max-width: 600px) {
             width: 90%;
@@ -153,10 +162,13 @@
             border: none;
             outline: none;
             color: $secondary;
+            font-family: "Nunito Sans", sans-serif;
             font-style: normal;
-            font-weight: 200;
+            font-weight: 300;
             font-size: 16px;
             line-height: 24px;
+            // background-color: aqua;
+
             &::placeholder {
               color: $gray;
             }
@@ -224,6 +236,7 @@
             border: none;
             outline: none;
             color: $secondary;
+            font-family: "Nunito Sans", sans-serif;
             font-style: normal;
             font-weight: 300;
             font-size: 16px;
@@ -296,14 +309,15 @@
             width: fit-content;
 
             margin-right: 8px;
+            font-family: "Nunito Sans", sans-serif;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 14px;
             line-height: 22px;
           }
           img {
-            width: 12px;
-            height: 12px;
+            width: 11px;
+            height: 11px;
             margin-top: -1px;
             filter: invert(100%);
           }
@@ -317,9 +331,9 @@
             background-color: $orange;
             border: none;
             color: $white;
-
+            font-family: "Nunito Sans", sans-serif;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             cursor: pointer;
@@ -357,7 +371,7 @@
   }
   .anchor {
     position: absolute;
-    top: -200px;
+    top: -95px;
     @media (max-width: 450px) {
       top: -85px;
     }

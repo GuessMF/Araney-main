@@ -1,7 +1,7 @@
 .how-we-work {
   width: auto;
   height: auto;
-  margin-top: -180px;
+  margin-top: -150px;
 
   main {
     overflow-x: hidden;
@@ -23,7 +23,7 @@
     align-items: center;
     font-size: 4ch;
     background-color: $secondary;
-    margin-top: 100px;
+    margin-top: 80px;
     @media (max-width: 1040px) {
       margin-top: 80px;
     }
@@ -59,9 +59,12 @@
       .how-we-work__title {
         h1 {
           color: $white;
-          font-weight: 700;
+          font-weight: 600;
           font-size: 64px;
           color: #14213d;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          line-height: 122px;
           text-shadow: -0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2,
             -0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px -0 1px #f2f2f2,
             1px -0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2,
@@ -70,10 +73,11 @@
             -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
         }
         p {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 300;
           font-size: 20px;
-          font-weight: 400;
           line-height: 30px;
-          letter-spacing: 0em;
           text-align: left;
           color: $white;
         }
@@ -88,6 +92,8 @@
     .steps {
       .how-we-work__text {
         margin: 24px;
+        //  border: #f2f2f2 solid 1px;
+
         span {
           font-size: 20px;
           font-weight: 700;
@@ -95,22 +101,28 @@
           letter-spacing: 0em;
           text-align: left;
           color: $orange;
+          //  border: #f2f2f2 solid 1px;
         }
         h1 {
           font-size: 40px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 48px;
           letter-spacing: 0em;
           text-align: left;
           color: $white;
+          //border: #f2f2f2 solid 1px;
+          margin-top: 10px;
+          margin-bottom: 0;
         }
         p {
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 300;
           line-height: 30px;
           letter-spacing: 0em;
           text-align: left;
           color: $white;
+          // border: #f2f2f2 solid 1px;
+          margin-top: 14px;
         }
       }
       .how-we-work__picture {
@@ -123,6 +135,8 @@
       img {
         //width: 50%;
         width: auto;
+        width: 50%;
+        // width: 350px;
         margin: 0 auto;
       }
     }

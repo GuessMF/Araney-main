@@ -23,8 +23,13 @@
 
   h2 {
     margin: 0;
+
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
     font-size: 32px;
-    font-weight: 600;
+    line-height: 38px;
+    color: $secondary;
   }
 }
 
@@ -59,7 +64,7 @@
       }
       p {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         color: $white;
         margin: 0;
         margin-top: 16px;

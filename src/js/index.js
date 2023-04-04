@@ -1,7 +1,16 @@
 let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 let eventName = isMobile ? "touchmove" : "wheel";
 
-console.log(eventName);
+const isSafari =
+  /constructor/i.test(window.HTMLElement) ||
+  (function (p) {
+    return p.toString() === "[object SafariRemoteNotification]";
+  })(
+    !window["safari"] ||
+      (typeof safari !== "undefined" && window["safari"].pushNotification)
+  );
+
+const isChrome = window.navigator.userAgent.indexOf("Chrome") > -1;
 
 window.addEventListener("touchstart", touchStart, false);
 
@@ -26,17 +35,21 @@ function touchStart(event) {
     document
       .querySelectorAll(".sticky-container")
       .forEach(function (container) {
-        const stikyContainerHeight =
-          container.querySelector("main").scrollWidth;
+        let stikyContainerHeight = container.querySelector("main").scrollWidth;
+        isChrome
+          ? (stikyContainerHeight = stikyContainerHeight / 1.8)
+          : stikyContainerHeight;
+
         container.setAttribute(
           "style",
-          "height: " + stikyContainerHeight + "px"
+          "height: " + stikyContainerHeight + "px" // можно поменять если слишком много/мало
         );
       });
   }
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
+
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -145,23 +158,27 @@ popUpCloseBtn[1].addEventListener("click", () => {
   document.body.style.overflow = "visible";
 });
 
+console.log(document.querySelector(".active"));
 //Подсвечивание в шапке // доработать
 
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      document.querySelector(".active").classList.remove("active");
+      // document.querySelector(".active").classList.remove("active");
       let id = entry.target.getAttribute("id");
       let headerLink = document.querySelector(`.header__${id}`);
       let navBarLink = document.querySelector(`[href="#${id}"]`);
       const screenWidth = window.screen.width;
+      console.log(id);
 
       if (headerLink && id !== "app" && screenWidth > 1040) {
         // headerLink.childNodes[1].classList.add("active");
+        document.querySelector(".active").classList.remove("active");
         headerLink.classList.add("active");
       }
 
       if (screenWidth <= 1040) {
+        document.querySelector(".active").classList.remove("active");
         navBarLink.parentNode.classList.add("active");
       }
     }
@@ -169,7 +186,7 @@ const changeNav = (entries, observer) => {
 };
 
 const options = {
-  threshold: 0.1,
+  threshold: 0.2,
 };
 const observer = new IntersectionObserver(changeNav, options);
 const sections = document.querySelectorAll("div[id]");

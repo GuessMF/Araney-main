@@ -57,7 +57,7 @@
             </div>
           </div>
         </nav>
-        <div class="header__wrapper">
+        <div class="header__wrapper active">
           <a href="#app">
             <img
               class="header__logo header__welcome-screen"
@@ -65,16 +65,22 @@
               alt="header-logo"
           /></a>
 
-          <div class="header__about-us">
-            <a href="#about-us" class="active">О нас</a>
+          <div class="header__about-us" onClick='location.href="#about-us"'>
+            <a href="#about-us">О нас</a>
           </div>
-          <div class="header__how-we-work">
+          <div
+            class="header__how-we-work"
+            onClick='location.href="#how-we-work"'
+          >
             <a href="#how-we-work">Как мы работаем</a>
           </div>
-          <div class="header__services">
+          <div class="header__services" onClick='location.href="#services"'>
             <a href="#services">Услуги</a>
           </div>
-          <div class="header__selected-cases">
+          <div
+            class="header__selected-cases"
+            onClick='location.href="#selected-cases"'
+          >
             <a href="#selected-cases">Избранные кейсы</a>
           </div>
           <div class="header__button">
@@ -139,7 +145,7 @@
               <div class="about-us__first-box">
                 <div class="about-us__stat">
                   <h2>15 лет</h2>
-                  <p>На рынке труда с 2007 года</p>
+                  <p>На рынке с 2007 года</p>
                 </div>
                 <div class="about-us__icon">
                   <img src="./src/images/icon-emoji1.png" alt="smile" />
@@ -181,7 +187,7 @@
                 <img src="./src/images/1c-logo.png" alt="1c-logo" />
               </div>
               <div class="about-us__joomba">
-                <img src="./src/images/joomba-logo.png" alt="joomba-logo" />
+                <img src="./src/images/joomla-logo.png" alt="joomba-logo" />
               </div>
               <div class="about-us__bitrix">
                 <img src="./src/images/bitrix-logo.png" alt="bitrix-logo" />
@@ -249,7 +255,7 @@
                 <div class="how-we-work__block steps">
                   <div class="how-we-work__text">
                     <span>Шаг 3</span>
-                    <h1>Реализация проект</h1>
+                    <h1>Реализация проекта</h1>
                     <p>
                       Этот шаг можно декомпозироват на множество шагов:
                       построение архитектуры сервиса, аналитика
@@ -389,7 +395,7 @@
           </div>
         </div>
 
-        <div id="selected-cases" class="selected-cases">
+        <div id="selected-cases" class="selected-cases anchor">
           <div class="selected-cases__title">
             <h2>Избранные кейсы</h2>
           </div>

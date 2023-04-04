@@ -1,4 +1,4 @@
-@import "normalize.css";
+//@import "normalize.css";
 @import "variables.scss";
 @import "__header.scss";
 @import "__welcome-screen.scss";
@@ -44,5 +44,6 @@ html {
   font-family: "Nunito Sans", sans-serif;
   main {
     margin-top: 80px;
+    font-family: "Nunito Sans", sans-serif;
   }
 }
