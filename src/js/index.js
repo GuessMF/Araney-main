@@ -36,9 +36,9 @@ function touchStart(event) {
       .querySelectorAll(".sticky-container")
       .forEach(function (container) {
         let stikyContainerHeight = container.querySelector("main").scrollWidth;
-        isChrome
-          ? (stikyContainerHeight = stikyContainerHeight / 1.8)
-          : stikyContainerHeight;
+        // isChrome
+        //   ? (stikyContainerHeight = stikyContainerHeight / 1.8)
+        //   : stikyContainerHeight;
 
         container.setAttribute(
           "style",
@@ -186,7 +186,7 @@ const changeNav = (entries, observer) => {
 };
 
 const options = {
-  threshold: 0.2,
+  threshold: 0.1,
 };
 const observer = new IntersectionObserver(changeNav, options);
 const sections = document.querySelectorAll("div[id]");
