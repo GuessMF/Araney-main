@@ -235,6 +235,7 @@
             border-radius: 0px;
             border: none;
             outline: none;
+            resize: none;
             color: $secondary;
             font-family: "Nunito Sans", sans-serif;
             font-style: normal;
@@ -246,7 +247,7 @@
             }
 
             @media (max-width: 630px) {
-              width: 96%;
+              width: 90%;
             }
           }
         }

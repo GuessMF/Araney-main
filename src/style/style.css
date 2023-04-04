@@ -2121,6 +2121,7 @@ content .about-us__partners img {
   border-radius: 0px;
   border: none;
   outline: none;
+  resize: none;
   color: #14213d;
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
@@ -2136,7 +2137,7 @@ content .about-us__partners img {
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle input {
-    width: 96%;
+    width: 90%;
   }
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom {
