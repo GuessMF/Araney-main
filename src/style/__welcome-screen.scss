@@ -4,11 +4,10 @@
   width: 100vw;
   justify-content: center;
   height: 700px;
-  // height: 100vh;
+
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
   margin: 0 auto;
-  //margin-top: 20px;
 
   @media (max-width: 1439px) {
     width: 100vw;
@@ -93,11 +92,6 @@
   align-items: center;
   width: 720px;
   background-image: url(../images/welcome-screen.png);
-  // background-repeat: no-repeat;
-
-  // background-repeat: no-repeat;
-  //background-size: cover;
-  // background-position: center center;
   @media (max-width: 1439px) {
     width: 50%;
   }
@@ -108,25 +102,33 @@
 
 .welcome-screen__buttons {
   margin-top: 48px;
+
   button {
     cursor: pointer;
   }
 
   .welcome-screen__write-us {
+    transition: all 0.3s ease-out;
     width: 220px;
     height: 48px;
     background-color: $orange;
     color: $white;
     font-size: 16px;
     border: none;
+    &:hover {
+      background-color: $orange-hover;
+    }
   }
   .welcome-screen__working {
     background: none;
     width: 220px;
     height: 48px;
     color: $white;
-    font-size: 16px;
+    font-family: "Nunito Sans";
+    font-style: normal;
     font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
     border: none;
     text-align: center;
     @media (max-width: 420px) {

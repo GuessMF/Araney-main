@@ -1,7 +1,9 @@
 @import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
 .header {
   position: fixed;
   width: 100vw;
+  height: 80px;
   top: 0;
   left: 0;
   z-index: 50;
@@ -181,7 +183,7 @@
   align-items: center;
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 80px;
+  padding: 0px 80px;
   width: 90vw;
   margin: 0 auto;
   max-width: 1440px;
@@ -205,27 +207,36 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
   padding: 12px 24px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+.header .header__wrapper div:hover {
+  background-color: #f2f2f2;
 }
 .header .header__wrapper div a {
   text-decoration: none;
   color: #1c2e54;
-  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.header .header__wrapper div a:hover {
-  border-bottom: solid 3px #fca311;
-  margin-bottom: -3px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 .header .header__wrapper .header__brand {
   width: 130px;
 }
+.header .header__wrapper .header__about-us {
+  margin-left: 30px;
+}
 .header .header__logo {
   margin-left: 0;
-  width: 150px;
+  width: 125px;
+  margin-bottom: -6px;
 }
 @media (max-width: 1280px) {
   .header .header__logo {
@@ -234,6 +245,7 @@
   }
 }
 .header .header__button {
+  background-color: #ffffff !important;
   margin-left: auto;
 }
 .header .header__button a {
@@ -241,15 +253,21 @@
   height: 38px;
 }
 .header .header__button button {
+  transition: all 0.3s ease-out;
   width: 180px;
   height: 38px;
-  padding: 8px 43.5px;
   background-color: #fca311;
   color: #ffffff;
+  font-family: "Nunito Sans";
   font-style: normal;
+  font-weight: 600;
   font-size: 14px;
+  line-height: 22px;
   border: none;
   cursor: pointer;
+}
+.header .header__button button:hover {
+  background-color: #e38e03;
 }
 @media (max-width: 1439px) {
   .header .header__button {
@@ -259,6 +277,8 @@
 
 .active {
   border-bottom: solid 3px #fca311;
+}
+.active a {
   margin-bottom: -3px;
 }
 
@@ -397,6 +417,7 @@
   cursor: pointer;
 }
 .welcome-screen__buttons .welcome-screen__write-us {
+  transition: all 0.3s ease-out;
   width: 220px;
   height: 48px;
   background-color: #fca311;
@@ -404,13 +425,19 @@
   font-size: 16px;
   border: none;
 }
+.welcome-screen__buttons .welcome-screen__write-us:hover {
+  background-color: #e38e03;
+}
 .welcome-screen__buttons .welcome-screen__working {
   background: none;
   width: 220px;
   height: 48px;
   color: #ffffff;
-  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
   font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
   border: none;
   text-align: center;
 }
@@ -516,12 +543,17 @@ content .about-us__header .about-us__text {
   }
 }
 content .about-us__header .about-us__text h2 {
-  font-size: 32px;
+  font-style: normal;
   font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
 }
 content .about-us__header .about-us__text p {
-  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 content .about-us__header .about-us__logo-box {
   display: flex;
@@ -615,9 +647,17 @@ content .about-us__middle .about-us__stat {
 }
 content .about-us__middle .about-us__stat h2 {
   margin: 32px 16px 12px 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
 }
 content .about-us__middle .about-us__stat p {
   margin: 0 16px 0 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 content .about-us__middle .about-us__icon {
   display: flex;
@@ -691,6 +731,10 @@ content .about-us__subtitle {
 }
 content .about-us__subtitle p {
   margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 content .about-us__hr {
   width: 100%;
@@ -703,7 +747,7 @@ content .about-us__partners {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 116px;
   font-size: 20px;
   font-weight: 400;
@@ -738,6 +782,7 @@ content .about-us__partners img {
 .how-we-work {
   width: auto;
   height: auto;
+  margin-top: -180px;
 }
 .how-we-work main {
   overflow-x: hidden;
@@ -775,14 +820,12 @@ content .about-us__partners img {
   justify-content: space-between;
 }
 .how-we-work section .how-we-work__block {
-  margin-left: 100px;
-  margin-right: 100px;
   margin-top: -100px;
   height: 75%;
   width: 65%;
   width: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 @media (max-width: 950px) {
   .how-we-work section .how-we-work__block {
@@ -1071,9 +1114,11 @@ content .about-us__partners img {
 .services__content_block .services__description .services__wrapper h2 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-size: 32px;
+  font-style: normal;
   font-weight: 600;
+  font-size: 32px;
   line-height: 38px;
+  color: #14213d;
 }
 @media (max-width: 650px) {
   .services__content_block .services__description .services__wrapper h2 {
@@ -1099,9 +1144,11 @@ content .about-us__partners img {
 .services__content_block .services__description .services__wrapper p {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
+  color: #14213d;
 }
 @media (max-width: 650px) {
   .services__content_block .services__description .services__wrapper p {
@@ -1141,9 +1188,15 @@ content .about-us__partners img {
   background-color: #ffffff;
   border: 1px solid #b3b3b3;
   color: #14213d;
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
-  font-weight: 600;
+  line-height: 22px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.services__content_block .services__description .services__button button:hover {
+  border: 1px solid #1c2e54;
 }
 @media (max-width: 630px) {
   .services__content_block .services__description .services__button button {
@@ -1215,14 +1268,23 @@ content .about-us__partners img {
 }
 
 .first_content_block {
-  background-color: #14213d;
-  color: #ffffff;
+  background-color: #14213d !important;
   border: none !important;
 }
+.first_content_block h2 {
+  color: #f2f2f2 !important;
+}
+.first_content_block p {
+  color: #f2f2f2 !important;
+}
 .first_content_block button {
+  transition: all 0.3s ease-out;
   background-color: #fca311 !important;
   color: #ffffff !important;
   border: none !important;
+}
+.first_content_block button:hover {
+  background-color: #e38e03 !important;
 }
 
 .selected-cases {
@@ -1741,11 +1803,14 @@ content .about-us__partners img {
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper {
   height: 124px;
   text-align: center;
+  width: 70%;
   margin-top: 15%;
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper h3 {
-  font-size: 20px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
   color: #ffffff;
 }
 @media (max-width: 650px) {
@@ -1882,7 +1947,7 @@ content .about-us__partners img {
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_title h3 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 30px;
   margin-top: 0;
   margin-bottom: 0;
@@ -1900,6 +1965,10 @@ content .about-us__partners img {
   border: 1px #b3b3b3 solid;
   background-color: #ffffff;
   margin-top: 3px;
+  transition: all 0.3s ease-out;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_input:hover {
+  border: 1px solid #1c2e54;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_input:focus-within {
   border: #fca311 1px solid;
@@ -1932,6 +2001,17 @@ content .about-us__partners img {
   border-radius: 0px;
   border: none;
   outline: none;
+  color: #14213d;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top input::-moz-placeholder {
+  color: #b3b3b3;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top input::placeholder {
+  color: #b3b3b3;
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top input {
@@ -1940,6 +2020,12 @@ content .about-us__partners img {
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_left {
   width: 284px;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_left p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_left {
@@ -1953,6 +2039,12 @@ content .about-us__partners img {
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_right {
   width: 284px;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_right p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_top .discuss__form_right {
@@ -1970,10 +2062,12 @@ content .about-us__partners img {
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle p {
   margin: 0;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 22px;
   color: #14213d;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle .discuss__form_input {
   width: 100%;
@@ -1987,6 +2081,17 @@ content .about-us__partners img {
   border-radius: 0px;
   border: none;
   outline: none;
+  color: #14213d;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle input::-moz-placeholder {
+  color: #b3b3b3;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle input::placeholder {
+  color: #b3b3b3;
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_middle input {
@@ -2003,10 +2108,11 @@ content .about-us__partners img {
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom p {
   margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
   color: #14213d;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom .discuss__form_input {
   width: 100%;
@@ -2020,10 +2126,19 @@ content .about-us__partners img {
   height: 150px;
   border: none;
   resize: none;
-  color: #3e3e3e;
+  color: #14213d;
   outline: none;
-  font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom textarea::placeholder {
+  color: #b3b3b3;
 }
 @media (max-width: 630px) {
   .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_bottom textarea {
@@ -2037,20 +2152,26 @@ content .about-us__partners img {
   justify-content: center;
   height: 38px;
   margin-top: 16px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_add:hover {
+  background-color: #e6e6e6;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_add p {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 14px;
-  font-weight: 600;
   margin-right: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_add img {
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: -1px;
   filter: invert(100%);
-  cursor: pointer;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_button {
   width: 100%;
@@ -2062,10 +2183,15 @@ content .about-us__partners img {
   background-color: #fca311;
   border: none;
   color: #ffffff;
+  font-style: normal;
+  font-weight: 300;
   font-size: 16px;
-  font-weight: 600;
   line-height: 24px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.discuss .discuss__wrapper .discuss__right-box .discuss__content .discuss__form_button button:hover {
+  background-color: #e38e03;
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__policy {
   width: 584px;
@@ -2080,8 +2206,9 @@ content .about-us__partners img {
   }
 }
 .discuss .discuss__wrapper .discuss__right-box .discuss__policy p {
+  font-style: normal;
+  font-weight: 300;
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
   margin-top: 0;
 }

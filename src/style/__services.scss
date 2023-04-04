@@ -86,12 +86,15 @@
         height: fit-content;
         margin-top: 0;
       }
+
       h2 {
         margin-top: 0;
         margin-bottom: 12px;
-        font-size: 32px;
+        font-style: normal;
         font-weight: 600;
+        font-size: 32px;
         line-height: 38px;
+        color: $secondary;
         @media (max-width: 650px) {
           font-size: 26px;
         }
@@ -110,9 +113,12 @@
       p {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 16px;
+        font-style: normal;
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
+        color: $secondary;
+
         @media (max-width: 650px) {
           font-size: 14px;
         }
@@ -143,9 +149,16 @@
         background-color: $white;
         border: 1px solid $gray;
         color: $secondary;
+        font-style: normal;
+        font-weight: 400;
         font-size: 14px;
-        font-weight: 600;
+        line-height: 22px;
         cursor: pointer;
+        transition: all 0.3s ease-out;
+        &:hover {
+          border: 1px solid #1c2e54;
+        }
+
         @media (max-width: 630px) {
           width: 100%;
         }
@@ -201,14 +214,23 @@
     }
   }
 }
-
 .first_content_block {
-  background-color: $secondary;
-  color: $white;
+  background-color: $secondary !important;
+  h2 {
+    color: $white-hover !important;
+  }
+  p {
+    color: $white-hover !important;
+  }
+
   border: none !important;
   button {
+    transition: all 0.3s ease-out;
     background-color: $orange !important;
     color: $white !important;
     border: none !important;
+    &:hover {
+      background-color: $orange-hover !important;
+    }
   }
 }

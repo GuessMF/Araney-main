@@ -145,7 +145,7 @@ popUpCloseBtn[1].addEventListener("click", () => {
   document.body.style.overflow = "visible";
 });
 
-//Подсвечивание в шапке
+//Подсвечивание в шапке // доработать
 
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
@@ -157,7 +157,8 @@ const changeNav = (entries, observer) => {
       const screenWidth = window.screen.width;
 
       if (headerLink && id !== "app" && screenWidth > 1040) {
-        headerLink.childNodes[1].classList.add("active");
+        // headerLink.childNodes[1].classList.add("active");
+        headerLink.classList.add("active");
       }
 
       if (screenWidth <= 1040) {

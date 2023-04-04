@@ -1,6 +1,7 @@
 .header {
   position: fixed;
   width: 100vw;
+  height: 80px;
   top: 0;
   left: 0;
   z-index: 50;
@@ -200,7 +201,7 @@
     font-size: 16px;
     font-weight: 600;
 
-    padding: 10px 80px;
+    padding: 0px 80px;
     width: 90vw;
     margin: 0 auto;
     max-width: 1440px;
@@ -210,7 +211,6 @@
 
     @media (max-width: 1439px) {
       padding: 10px 80px;
-
       justify-content: center;
     }
     @media (max-width: 1280px) {
@@ -223,30 +223,40 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      height: 100%;
       padding: 12px 24px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-color: $white-hover;
+      }
 
       a {
         text-decoration: none;
         color: $secondary-light;
-        height: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        &:hover {
-          border-bottom: solid 3px $orange;
-          margin-bottom: -3px;
-        }
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
       }
     }
 
     .header__brand {
       width: 130px;
     }
+    .header__about-us {
+      margin-left: 30px;
+    }
   }
   .header__logo {
     margin-left: 0;
-    width: 150px;
+    width: 125px;
+    margin-bottom: -6px;
 
     @media (max-width: 1280px) {
       margin-left: auto;
@@ -254,20 +264,28 @@
     }
   }
   .header__button {
+    background-color: $white !important;
+
     a {
       width: 180px;
       height: 38px;
     }
     button {
+      transition: all 0.3s ease-out;
       width: 180px;
       height: 38px;
-      padding: 8px 43.5px;
       background-color: $orange;
       color: $white;
+      font-family: "Nunito Sans";
       font-style: normal;
+      font-weight: 600;
       font-size: 14px;
+      line-height: 22px;
       border: none;
       cursor: pointer;
+      &:hover {
+        background-color: $orange-hover;
+      }
     }
     margin-left: auto;
     @media (max-width: 1439px) {
@@ -277,7 +295,9 @@
 }
 .active {
   border-bottom: solid 3px $orange;
-  margin-bottom: -3px;
+  a {
+    margin-bottom: -3px;
+  }
 }
 #app {
   border: none !important;

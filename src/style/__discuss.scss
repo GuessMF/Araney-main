@@ -98,7 +98,7 @@
         .discuss__form_title {
           h3 {
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 30px;
             margin-top: 0;
             margin-bottom: 0;
@@ -117,6 +117,11 @@
           border: 1px $gray solid;
           background-color: $white;
           margin-top: 3px;
+          transition: all 0.3s ease-out;
+
+          &:hover {
+            border: 1px solid #1c2e54;
+          }
           &:focus-within {
             border: $orange 1px solid;
           }
@@ -147,12 +152,28 @@
             border-radius: 0px;
             border: none;
             outline: none;
+            color: $secondary;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 24px;
+            &::placeholder {
+              color: $gray;
+            }
+
             @media (max-width: 630px) {
               width: 90%;
             }
           }
           .discuss__form_left {
             width: 284px;
+            p {
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+            }
+
             @media (max-width: 630px) {
               width: 49%;
             }
@@ -162,6 +183,12 @@
           }
           .discuss__form_right {
             width: 284px;
+            p {
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 22px;
+            }
             @media (max-width: 630px) {
               width: 49%;
             }
@@ -176,13 +203,16 @@
 
           p {
             margin: 0;
-            font-size: 14px;
-            font-weight: 400;
             line-height: 22px;
             color: $secondary;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
           }
           .discuss__form_input {
             width: 100%;
+
             &:focus-within {
               border: $orange 1px solid;
             }
@@ -193,6 +223,14 @@
             border-radius: 0px;
             border: none;
             outline: none;
+            color: $secondary;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            &::placeholder {
+              color: $gray;
+            }
 
             @media (max-width: 630px) {
               width: 96%;
@@ -201,15 +239,17 @@
         }
         .discuss__form_bottom {
           margin-top: 16px;
+
           @media (max-width: 630px) {
             width: 100%;
           }
           p {
             margin: 0;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 22px;
             color: $secondary;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
           }
           .discuss__form_input {
             width: 100%;
@@ -224,11 +264,16 @@
             border: none;
             resize: none;
 
-            color: $dark-grey;
+            color: $secondary;
             outline: none;
-            font-size: 16px;
             font-family: "Nunito Sans", sans-serif;
-
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            &::placeholder {
+              color: $gray;
+            }
             @media (max-width: 630px) {
               width: 90%;
             }
@@ -241,19 +286,26 @@
           justify-content: center;
           height: 38px;
           margin-top: 16px;
+          transition: all 0.3s ease-out;
+          cursor: pointer;
+          &:hover {
+            background-color: $gray-hover;
+          }
 
           p {
             width: fit-content;
-            font-size: 14px;
-            font-weight: 600;
+
             margin-right: 8px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 22px;
           }
           img {
-            width: 20px;
-            height: 20px;
-            margin-top: 0;
+            width: 12px;
+            height: 12px;
+            margin-top: -1px;
             filter: invert(100%);
-            cursor: pointer;
           }
         }
         .discuss__form_button {
@@ -265,10 +317,17 @@
             background-color: $orange;
             border: none;
             color: $white;
+
+            font-style: normal;
+            font-weight: 300;
             font-size: 16px;
-            font-weight: 600;
             line-height: 24px;
             cursor: pointer;
+
+            transition: all 0.3s ease-out;
+            &:hover {
+              background-color: $orange-hover;
+            }
           }
         }
       }
@@ -282,8 +341,9 @@
           height: fit-content;
         }
         p {
+          font-style: normal;
+          font-weight: 300;
           font-size: 12px;
-          font-weight: 400;
           line-height: 18px;
           margin-top: 0;
           a {

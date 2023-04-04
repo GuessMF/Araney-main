@@ -437,9 +437,12 @@
         //  width: 272px;
         height: 124px;
         text-align: center;
+        width: 70%;
         h3 {
-          font-size: 20px;
+          font-style: normal;
           font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
           color: $white;
           @media (max-width: 650px) {
             font-size: 16px;
