@@ -88,6 +88,23 @@ function touchStart(event) {
   }
 })();
 
+//Скрытие картинок при очень маленькой высоте
+
+// function removeSliderImg() {
+//   if (window.innerHeight < 600) {
+//     const img = document.querySelectorAll(".how-we-work__picture");
+//     img.forEach((el) => {
+//       el.style.display = "none";
+//     });
+//     // img.style.display = "none";
+//   }
+//   console.log(window.innerHeight);
+// }
+//removeSliderImg();
+// const removeSliderImg = () => {
+//   console.log("hello");
+// };
+
 //How we work mobile scroll slider
 function mobileScroll() {
   const howWeWork = document.querySelector("#how-we-work");
@@ -159,7 +176,8 @@ popUpCloseBtn[1].addEventListener("click", () => {
 });
 
 console.log(document.querySelector(".active"));
-//Подсвечивание в шапке // доработать
+
+//Подсвечивание в шапке
 
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {

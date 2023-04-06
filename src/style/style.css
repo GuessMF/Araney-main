@@ -761,11 +761,7 @@ content .about-us__partners {
 }
 @media (max-width: 1100px) {
   content .about-us__partners {
-    flex-wrap: wrap;
-    justify-content: center;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-bottom: 20px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 450px) {
@@ -790,14 +786,19 @@ content .about-us__partners img {
   filter: grayscale(100%) contrast(0%) brightness(130%);
   width: 50%;
 }
+@media (max-width: 1100px) {
+  content .about-us__partners img {
+    width: 70%;
+  }
+}
 @media (max-width: 800px) {
   content .about-us__partners img {
-    width: 50%;
+    width: 80%;
   }
 }
 @media (max-width: 450px) {
   content .about-us__partners img {
-    width: 30%;
+    width: 80%;
   }
 }
 
@@ -825,6 +826,11 @@ content .about-us__partners img {
   font-size: 4ch;
   background-color: #14213d;
   margin-top: 80px;
+}
+@media (max-width: 1200px) {
+  .how-we-work section {
+    min-width: 100%;
+  }
 }
 @media (max-width: 1040px) {
   .how-we-work section {
@@ -924,13 +930,33 @@ content .about-us__partners img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.how-we-work section .steps .step-1-img {
+  background-image: url(../images/step1.png);
+}
+.how-we-work section .steps .step-2-img {
+  background-image: url(../images/step2.png);
+}
+.how-we-work section .steps .step-3-img {
+  background-image: url(../images/step3.png);
+}
+.how-we-work section .steps .step-4-img {
+  background-image: url(../images/step4.png);
 }
 .how-we-work section .steps img {
-  width: auto;
-  width: 50%;
+  display: none;
   margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .how-we-work-mobile {
@@ -939,7 +965,6 @@ content .about-us__partners img {
   height: -moz-fit-content;
   height: fit-content;
   width: 100vw;
-  margin: 50px auto;
   scroll-snap-type: x mandatory;
   flex-wrap: nowrap;
 }
@@ -1018,10 +1043,25 @@ content .about-us__partners img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.how-we-work-mobile .sections main .section_item .steps .step-1-img {
+  background-image: url(../images/step1.png);
+}
+.how-we-work-mobile .sections main .section_item .steps .step-2-img {
+  background-image: url(../images/step2.png);
+}
+.how-we-work-mobile .sections main .section_item .steps .step-3-img {
+  background-image: url(../images/step3.png);
+}
+.how-we-work-mobile .sections main .section_item .steps .step-4-img {
+  background-image: url(../images/step4.png);
 }
 .how-we-work-mobile .sections main .section_item .steps img {
+  display: none;
   width: 60%;
   width: 50%;
   margin: 0 auto;
